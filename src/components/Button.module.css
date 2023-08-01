@@ -15,10 +15,18 @@
   color: var(--color-dark--1);
 }
 
+.primary:hover {
+  opacity: 0.8;
+}
+
 .back {
   font-weight: 600;
   background: none;
   border: 1px solid currentColor;
+}
+
+.back:hover {
+  opacity: 0.8;
 }
 
 .position {
@@ -32,4 +40,8 @@
   background-color: var(--color-brand--2);
   color: var(--color-dark--1);
   box-shadow: 0 0.4rem 1.2rem rgba(36, 42, 46, 0.16);
+}
+
+.position:hover {
+  opacity: 0.8;
 }

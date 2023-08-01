@@ -2,14 +2,11 @@ import CityItem from './CityItem';
 import Spinner from './Spinner';
 import Message from './Message';
 import { City } from '../types/city';
+import { useCities } from '../contexts/CitiesContext';
 import styles from './CityList.module.css';
 
-interface CityListProps {
-    cities: City[];
-    isLoading: boolean;
-}
-
-function CityList({ cities, isLoading }: CityListProps) {
+function CityList() {
+    const { cities, isLoading } = useCities();
     if (isLoading) return <Spinner />;
 
     if (!cities.length) return <Message message="Add your first city by clicking on a city on the map" />;
