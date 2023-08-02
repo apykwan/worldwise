@@ -2,7 +2,7 @@ export type City = {
     cityName: string;
     country: string;
     emoji: string;
-    date: Date;
+    date: string;
     notes: string;
     position: {
         lat: number;
@@ -10,3 +10,5 @@ export type City = {
     },
     id: number;
 }
+
+export type MapPosition = [lat: number, lng: number];
