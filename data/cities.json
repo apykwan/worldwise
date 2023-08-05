@@ -71,6 +71,30 @@
         "lng": "-2.13128394200588"
       },
       "id": 98443198
+    },
+    {
+      "cityName": "Moscow",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2023-11-29T10:27:30.000Z",
+      "notes": "Where Tetris was invented!",
+      "position": {
+        "lat": 55.61544398777257,
+        "lng": 37.725853389176756
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Waterville",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2023-08-04T01:36:12.484Z",
+      "notes": "sadfsdfa",
+      "position": {
+        "lat": 47.62181440903843,
+        "lng": -119.42296744876019
+      },
+      "id": 98443200
     }
   ]
 }

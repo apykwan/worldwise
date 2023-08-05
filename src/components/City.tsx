@@ -7,7 +7,7 @@ import { useCities } from '../contexts/CitiesContext';
 import { City as CityType } from '../types/city';
 import styles from "./City.module.css";
 
-const formatDate = (date: string | null): string | null => {
+const formatDate = (date: Date): string | null => {
   if (!date) return null;
   
   return new Intl.DateTimeFormat("en", {
@@ -23,7 +23,7 @@ function City() {
   const { getCity, currentCity, isLoading } = useCities();
 
   useEffect(function() {
-    getCity(id!);
+    getCity(Number(id));
   }, [id]);
 
   if (isLoading) return <Spinner />
@@ -41,7 +41,7 @@ function City() {
 
       <div className={styles.row}>
         <h6>You went to {cityName} on</h6>
-        <p>{formatDate(date || null)}</p>
+        <p>{formatDate(date)}</p>
       </div>
 
       {notes && (
