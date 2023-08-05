@@ -34,10 +34,10 @@ function reducer(state: State, action: Action): State {
 }
 
 const FAKE_USER: User = {
-  name: "Jack",
+  name: "Jack Bob",
   email: "jack@example.com",
   password: "qwerty",
-  avatar: "https://i.pravatar.cc/100?u=zz",
+  avatar: "https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1024px-SpongeBob_SquarePants_character.svg.png",
 };
 
 const AuthContext = createContext({} as AuthContext);
