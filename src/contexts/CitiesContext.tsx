@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useReducer } from 'react';
+import React, { createContext, useContext, useEffect, useReducer, useCallback } from 'react';
 
 import { City } from '../types/city';
 
@@ -108,7 +108,7 @@ export function CitiesProvider({ children }: CitiesProviderProps) {
     fetchCities();
   }, []);
 
-  async function getCity(id: number): Promise<void> {
+  const getCity = useCallback(async function getCity(id: number): Promise<void> {
     if (id === currentCity?.id) return;
 
     dispatch({ type: "loading" });
@@ -119,7 +119,7 @@ export function CitiesProvider({ children }: CitiesProviderProps) {
     } catch {
       dispatch({ type: 'rejected', payload: "There was an error loading data..."});
     } 
-  }
+  }, [currentCity.id]);
       
   async function createCity(newCity: City): Promise<void> {
     dispatch({ type: "loading" });
